@@ -40,7 +40,7 @@
         {
             "nombre": "Cubo 3D",
             "archivo": "ejercicio.html",
-            "ruta": "ejercicios_practicos/ejercicio.html",
+            "ruta": "trabajos/ejercicios_practicos/ejercicio.html",
             "tecnologias": ["HTML5", "CSS3", "JavaScript"],
             "descripcion": "Cubo Girando en su eje en 3D con CSS3 y JavaScript3D"
         }
