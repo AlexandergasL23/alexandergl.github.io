@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphica Lab | Computación Gráfica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>✦ GRÁFICA <span style="color:#f25e5e;">LAB</span> ✦</h1>
+            <p>Portafolio de trabajos y ejercicios - Computación Gráfica</p>
+            <div class="badge">
+                <i class="fab fa-github"></i> GitHub Pages | Proyectos HTML/CSS/JS
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <aside class="sidebar">
+                <div class="course-info">
+                    <h3><i class="fas fa-laptop-code"></i> Computación Gráfica</h3>
+                    <p>Visualización, animación, canvas interactivo</p>
+                </div>
+
+                <div class="section-title">
+                    <i class="fas fa-folder-tree"></i> 
+                    <span>Categorías</span>
+                </div>
+                <div class="categories">
+                    <div class="cat-btn active" data-filter="all">
+                        <i class="fas fa-th-large"></i>
+                        <span>Todos</span>
+                    </div>
+                    <div class="cat-btn" data-filter="trabajos">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tareas</span>
+                    </div>
+                    <div class="cat-btn" data-filter="ejercicios">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Ejercicios</span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>¿Cómo agregar trabajos?</strong>
+                    <p>📁 Edita el archivo <strong>proyectos.json</strong></p>
+                    <p>✏️ Agrega la ruta de tu nuevo proyecto</p>
+                    <p>🚀 Sube los cambios a GitHub</p>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <div class="filter-header">
+                    <h2><i class="fas fa-brush"></i> Mis proyectos</h2>
+                    <div class="filter-badge" id="activeFilterLabel">Mostrando: todos</div>
+                </div>
+                
+                <div id="projectsContainer" class="grid-proyectos">
+                    <div class="loading">Cargando proyectos...</div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <i class="fas fa-fire"></i> Portafolio dinámico | Actualiza proyectos.json para agregar nuevos trabajos
+        </footer>
+    </div>
+
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <span id="modalCategory" class="modal-category"></span>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-toolbar">
+                <button id="openNewTab" class="toolbar-btn"><i class="fas fa-external-link-alt"></i> Abrir nueva pestaña</button>
+                <button id="refreshPreview" class="toolbar-btn"><i class="fas fa-sync-alt"></i> Recargar</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="previewFrame" class="preview-frame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

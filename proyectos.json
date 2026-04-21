@@ -1,0 +1,48 @@
+{
+    "trabajos": [
+        {
+            "nombre": "ACTIVIDAD 4",
+            "archivo": "ejercicio1.html",
+            "ruta": "trabajos/actividad4/ejercicio1.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Descripción de la tarea"
+        },
+        {
+            "nombre": "ACTIVIDAD 4",
+            "archivo": "ejercicio2.html",
+            "ruta": "trabajos/actividad4/ejercicio2.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Descripción de la tarea"
+        },
+        {
+            "nombre": "ACTIVIDAD 4",
+            "archivo": "ejercicio3.html",
+            "ruta": "trabajos/actividad4/ejercicio3.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Descripción de la tarea"
+        },
+        {
+            "nombre": "NUEVA TAREA",
+            "archivo": "index.html",
+            "ruta": "trabajos/nueva-carpeta/index.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Descripción de la nueva tarea"
+        }
+    ],
+    "ejercicios": [
+        {
+            "nombre": "Ejercicio 1",
+            "archivo": "ejercicio1.html",
+            "ruta": "ejercicios_practicos/ejercicio1.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Descripción del ejercicio 1"
+        },
+        {
+            "nombre": "NUEVO EJERCICIO",
+            "archivo": "nuevo-ejercicio.html",
+            "ruta": "ejercicios_practicos/nuevo-ejercicio.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Descripción del nuevo ejercicio"
+        }
+    ]
+}
