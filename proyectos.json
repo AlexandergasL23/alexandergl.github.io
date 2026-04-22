@@ -47,14 +47,14 @@
         {
             "nombre": "Ejercicio 1",
             "archivo": "ejercicio1.html",
-            "ruta": "ejercicios_practicos/ejercicio1.html",
+            "ruta": "ejercicios/ejercicio1.html",
             "tecnologias": ["HTML5", "CSS3", "JavaScript"],
             "descripcion": "Descripción del ejercicio 1"
         },
         {
             "nombre": "Cubo 3D",
             "archivo": "ejercicio.html",
-            "ruta": "trabajos/ejercicios_practicos/ejercicio.html",
+            "ruta": "trabajos/ejercicios/ejercicio.html",
             "tecnologias": ["HTML5", "CSS3", "JavaScript"],
             "descripcion": "Cubo Girando en su eje en 3D con CSS3 y JavaScript3D"
         }
