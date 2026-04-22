@@ -14,7 +14,7 @@ document.body.appendChild(renderer.domElement);
 
 // 4. CREAR EL CUBO
 const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshNormalMaterial(); // colores arcoíris
+const material = new THREE.MeshNormalMaterial();
 const cubo = new THREE.Mesh(geometry, material);
 scene.add(cubo);
 
@@ -26,45 +26,58 @@ scene.add(light);
 const ambientLight = new THREE.AmbientLight(0x404060);
 scene.add(ambientLight);
 
-// 6. AYUDAS VISUALES
-const axesHelper = new THREE.AxesHelper(3);
+// 6. AYUDAS VISUALES (REDUCIDAS al 40%)
+// Cuadrícula más pequeña (antes 8x8, ahora 5x5)
+const axesHelper = new THREE.AxesHelper(2.5);  // Reducido de 3 a 2.5
 scene.add(axesHelper);
 
-const gridHelper = new THREE.GridHelper(8, 20);
+const gridHelper = new THREE.GridHelper(5, 15);  // Reducido de 8 a 5
 scene.add(gridHelper);
 
-// 7. POSICIONAR LA CÁMARA
-camera.position.set(4, 4, 6);
+// 7. POSICIONAR LA CÁMARA (más cerca para ver mejor el espacio reducido)
+camera.position.set(3, 3, 4.5);  // Más cerca (antes 4,4,6)
 camera.lookAt(0, 0, 0);
 
-// 8. CONTROLES POR TECLADO
+// 8. LÍMITES DE MOVIMIENTO REDUCIDOS en 40%
+// Antes: límite ±3, ahora: límite ±1.8 (40% menos)
+const limiteMovimiento = 1.8;  // Reducido de 3 a 1.8
+
+// 9. CONTROLES POR TECLADO (con límites)
 window.addEventListener('keydown', (event) => {
     switch(event.key) {
-        // ===== TRASLACIÓN (movimiento) =====
+        // ===== TRASLACIÓN (movimiento) CON LÍMITES =====
         case 'ArrowUp':
-            cubo.position.y += 0.2;  // mover arriba
+            if (cubo.position.y + 0.2 <= limiteMovimiento) {
+                cubo.position.y += 0.15;  // Movimiento más suave
+            }
             break;
         case 'ArrowDown':
-            cubo.position.y -= 0.2;  // mover abajo
+            if (cubo.position.y - 0.2 >= -limiteMovimiento) {
+                cubo.position.y -= 0.15;
+            }
             break;
         case 'ArrowLeft':
-            cubo.position.x -= 0.2;  // mover izquierda
+            if (cubo.position.x - 0.2 >= -limiteMovimiento) {
+                cubo.position.x -= 0.15;
+            }
             break;
         case 'ArrowRight':
-            cubo.position.x += 0.2;  // mover derecha
+            if (cubo.position.x + 0.2 <= limiteMovimiento) {
+                cubo.position.x += 0.15;
+            }
             break;
         
-        // ===== ROTACIÓN (orientación) =====
+        // ===== ROTACIÓN (sin cambios) =====
         case 'q':
         case 'Q':
-            cubo.rotation.y -= 0.1;  // rotar izquierda
+            cubo.rotation.y -= 0.1;
             break;
         case 'e':
         case 'E':
-            cubo.rotation.y += 0.1;  // rotar derecha
+            cubo.rotation.y += 0.1;
             break;
         
-        // ===== ESCALADO (tamaño) =====
+        // ===== ESCALADO (con límite inferior) =====
         case 'z':
         case 'Z':
             cubo.scale.x += 0.1;
@@ -80,7 +93,7 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
-// 9. FUNCIÓN DE ANIMACIÓN
+// 10. FUNCIÓN DE ANIMACIÓN
 function animate() {
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
@@ -88,12 +101,12 @@ function animate() {
 
 animate();
 
-// 10. AJUSTE RESPONSIVO
+// 11. AJUSTE RESPONSIVO
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// Mensaje en consola
-console.log('🎮 Controles activos: FLECHAS(mover) | Q/E(rotar) | Z/X(escalar)');
+// 12. MENSAJE EN CONSOLA
+console.log('🎮 Espacio reducido al 40% | Límites: ±' + limiteMovimiento);
