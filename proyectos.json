@@ -22,11 +22,25 @@
             "descripcion": "Descripción de la tarea"
         },
         {
-            "nombre": "NUEVA TAREA",
-            "archivo": "index.html",
-            "ruta": "trabajos/nueva-carpeta/index.html",
+            "nombre": "ACTIVIDAD 5",
+            "archivo": "ejercicio1.html",
+            "ruta": "trabajos/actividad5/ejercicio1.html",
             "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-            "descripcion": "Descripción de la nueva tarea"
+            "descripcion": "Desplazamiento lineal de un cubo en el espacio tridimensional Descripción de la propuesta"
+        },
+        {
+            "nombre": "ACTIVIDAD 5",
+            "archivo": "ejercicio2.html",
+            "ruta": "trabajos/actividad5/ejercicio2.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Rotación continua de un cubo sobre sus ejes Título de la práctica"
+        },
+        {
+            "nombre": "ACTIVIDAD 5",
+            "archivo": "ejercicio3.html",
+            "ruta": "trabajos/actividad5/ejercicio3.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Transformaciones combinadas en un objeto 3D controlado por el usuario"
         }
     ],
     "ejercicios": [
