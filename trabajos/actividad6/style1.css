@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #1a1a2e;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+/* CONTENEDOR DE DOS COLUMNAS */
+.contenedor-doble {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* COLUMNA IZQUIERDA - Documentos (30%) */
+.columna-izquierda {
+    flex: 0.8;
+    min-width: 200px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* COLUMNA DERECHA - Curva 3D (70%) */
+.columna-derecha {
+    flex: 2;
+    min-width: 280px;
+}
+
+/* Lista de documentos */
+.lista ul {
+    list-style: none;
+}
+
+.lista h3 {
+    color: #1a1a2e;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #667eea;
+}
+
+.lista li {
+    margin: 8px 0;
+    padding: 8px 10px;
+    background: white;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border-left: 3px solid #667eea;
+}
+
+.lista li:hover {
+    background: #e9ecef;
+    transform: translateX(3px);
+}
+
+.lista a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icono {
+    font-size: 1.1rem;
+}
+
+.nombre-archivo {
+    flex: 1;
+    word-break: break-word;
+}
+
+/* Contenedor del canvas 3D */
+#canvas-container {
+    width: 100%;
+    height: 280px;
+    background: #0f0f1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 1px solid #667eea;
+}
+
+.descripcion-curva {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 8px;
+}
+
+.error, .vacio {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.vacio {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+/* Responsive - en móviles se apilan */
+@media (max-width: 700px) {
+    .contenedor-doble {
+        flex-direction: column;
+    }
+    
+    .columna-izquierda, .columna-derecha {
+        width: 100%;
+    }
+    
+    #canvas-container {
+        height: 220px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+}

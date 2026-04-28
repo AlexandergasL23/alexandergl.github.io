@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6 - Mallas Poligonales 3D</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📁 ACTIVIDAD 6 - MALLAS POLIGONALES</h1>
+    <p class="subtitulo">Realizado por: Alexander Jr. Gastañaga Leon</p>
+    
+    <!-- CONTENEDOR DE DOS COLUMNAS -->
+    <div class="contenedor-doble">
+        
+        <!-- COLUMNA IZQUIERDA: Lista de documentos -->
+        <div class="columna-izquierda">
+            <div id="lista-documentos" class="lista">
+                <p>Cargando documentos...</p>
+            </div>
+        </div>
+        
+        <!-- COLUMNA DERECHA: Malla Poligonal 3D -->
+        <div class="columna-derecha">
+            <div id="canvas-container"></div>
+            <p class="descripcion-malla">🔺 Malla poligonal | Icosaedro rotativo con aristas</p>
+        </div>
+        
+    </div>
+</div>
+
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+        }
+    }
+</script>
+<script type="module" src="script2.js"></script>
+</body>
+</html>

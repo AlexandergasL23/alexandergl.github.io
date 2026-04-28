@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6 - Curvas Paramétricas 3D</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📁 ACTIVIDAD 6 - CURVAS PARAMÉTRICAS</h1>
+    <p class="subtitulo">Realizado por: Alexander Jr. Gastañaga Leon</p>
+    
+    <!-- CONTENEDOR DE DOS COLUMNAS -->
+    <div class="contenedor-doble">
+        
+        <!-- COLUMNA IZQUIERDA: Lista de documentos -->
+        <div class="columna-izquierda">
+            <div id="lista-documentos" class="lista">
+                <p>Cargando documentos...</p>
+            </div>
+        </div>
+        
+        <!-- COLUMNA DERECHA: Curva 3D -->
+        <div class="columna-derecha">
+            <div id="canvas-container"></div>
+            <p class="descripcion-curva">✨ Curva paramétrica 3D | Espiral en movimiento</p>
+        </div>
+        
+    </div>
+</div>
+
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+        }
+    }
+</script>
+<script type="module" src="script1.js"></script>
+</body>
+</html>
