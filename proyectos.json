@@ -41,6 +41,20 @@
             "ruta": "trabajos/actividad5/ejercicio3.html",
             "tecnologias": ["HTML5", "CSS3", "JavaScript"],
             "descripcion": "Transformaciones combinadas en un objeto 3D controlado por el usuario"
+        },
+        {
+            "nombre": "ACTIVIDAD 6",
+            "archivo": "curvas.html",
+            "ruta": "trabajos/actividad6/curvas.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Visualizador de documentos - Muestra enlaces a archivos PDF, imágenes y textos desde la carpeta archivos/"
+        },
+         {
+            "nombre": "ACTIVIDAD 6",
+            "archivo": "mallas.html",
+            "ruta": "trabajos/actividad6/mallas.html",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+            "descripcion": "Visualizador de documentos - Muestra enlaces a archivos PDF, imágenes y textos desde la carpeta archivos/"
         }
     ],
     "ejercicios": [
